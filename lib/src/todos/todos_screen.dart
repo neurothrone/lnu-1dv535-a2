@@ -84,6 +84,10 @@ class _TodosScreenState extends State<TodosScreen> {
 
   void _removeTodo(int index) {
     setState(() {
+      _controller.text = todos[index];
+      _controller.selection = TextSelection.fromPosition(
+        TextPosition(offset: _controller.text.length),
+      );
       todos.removeAt(index);
     });
   }
