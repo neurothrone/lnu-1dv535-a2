@@ -12,17 +12,18 @@ class TodoList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: ListView.builder(
-        itemCount: todos.length,
-        itemBuilder: (context, index) {
-          final todo = todos[index];
-          return ListTile(
-            title: Text(todo),
-            onTap: () => onTapTodo(index),
-          );
-        },
-      ),
+    return ListView.builder(
+      physics: const NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+      itemCount: todos.length,
+      itemBuilder: (context, index) {
+        final todo = todos[index];
+        return ListTile(
+          onTap: () => onTapTodo(index),
+          contentPadding: const EdgeInsets.all(0),
+          title: Text(todo),
+        );
+      },
     );
   }
 }
