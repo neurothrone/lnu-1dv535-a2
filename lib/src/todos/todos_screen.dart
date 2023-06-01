@@ -12,7 +12,7 @@ class TodosScreen extends StatefulWidget {
 }
 
 class _TodosScreenState extends State<TodosScreen> {
-  List<String> todos = [];
+  List<String> _todos = [];
 
   late TextEditingController _controller;
 
@@ -33,7 +33,18 @@ class _TodosScreenState extends State<TodosScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("ToDo List"),
-        actions: [],
+        actions: [
+          IconButton(
+            onPressed: _generateSampleList,
+            icon: const Icon(Icons.playlist_add_rounded),
+            tooltip: "Generate Sample List",
+          ),
+          IconButton(
+            onPressed: _clearTodoList,
+            icon: const Icon(Icons.clear),
+            tooltip: "Clear List",
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(kPadding20),
@@ -45,7 +56,7 @@ class _TodosScreenState extends State<TodosScreen> {
             ),
             const SizedBox(height: kPadding10),
             TodoList(
-              todos: todos,
+              todos: _todos,
               onTapTodo: _removeTodo,
             ),
           ],
@@ -59,18 +70,28 @@ class _TodosScreenState extends State<TodosScreen> {
     if (title.isEmpty) return;
 
     setState(() {
-      todos.add(title);
+      _todos.add(title);
       _controller.clear();
     });
   }
 
   void _removeTodo(int index) {
     setState(() {
-      _controller.text = todos[index];
+      _controller.text = _todos[index];
       _controller.selection = TextSelection.fromPosition(
         TextPosition(offset: _controller.text.length),
       );
-      todos.removeAt(index);
+      _todos.removeAt(index);
     });
+  }
+
+  void _generateSampleList() {
+    setState(() {
+      _todos = [for (var i = 0; i <= 20; i++) "Todo $i"];
+    });
+  }
+
+  void _clearTodoList() {
+    setState(() => _todos = []);
   }
 }
