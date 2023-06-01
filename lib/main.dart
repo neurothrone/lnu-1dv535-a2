@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'src/constants.dart';
 import 'src/home_screen.dart';
 
 void main() {
@@ -14,9 +15,15 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          appBarTheme: const AppBarTheme(
-        color: Colors.deepPurple,
-      )),
+        appBarTheme: const AppBarTheme(
+          color: Colors.deepPurple,
+        ),
+        inputDecorationTheme: const InputDecorationTheme(
+          border: kOutlineInputBorder,
+          enabledBorder: kOutlineInputBorder,
+          focusedBorder: kOutlineInputBorder,
+        ),
+      ),
       home: const HomeScreen(),
     );
   }
