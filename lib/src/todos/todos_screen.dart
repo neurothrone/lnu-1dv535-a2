@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../core/constants.dart';
 import 'add_todo_input.dart';
 import 'todo_list.dart';
 
@@ -11,26 +12,7 @@ class TodosScreen extends StatefulWidget {
 }
 
 class _TodosScreenState extends State<TodosScreen> {
-  List<String> todos = [
-    "Buy groceries",
-    "Walk the dog",
-    "Finish Flutter project",
-    "Study for exam",
-    "Clean the house",
-    "Pay bills",
-    "Go to the gym",
-    "Read a book",
-    "Prepare dinner",
-    "Buy groceries",
-    "Walk the dog",
-    "Finish Flutter project",
-    "Study for exam",
-    "Clean the house",
-    "Pay bills",
-    "Go to the gym",
-    "Read a book",
-    "Prepare dinner",
-  ];
+  List<String> todos = [];
 
   late TextEditingController _controller;
 
@@ -51,17 +33,17 @@ class _TodosScreenState extends State<TodosScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text("ToDo List"),
+        actions: [],
       ),
       body: SingleChildScrollView(
-        padding: const EdgeInsets.all(20.0),
-        // child: TodoContent(),
+        padding: const EdgeInsets.all(kPadding20),
         child: Column(
           children: [
             AddTodoInput(
               controller: _controller,
               onAddTodo: _addTodo,
             ),
-            const SizedBox(height: 10.0),
+            const SizedBox(height: kPadding10),
             TodoList(
               todos: todos,
               onTapTodo: _removeTodo,
