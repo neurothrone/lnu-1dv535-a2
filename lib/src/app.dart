@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'core/constants.dart';
-import 'todos/home_screen.dart';
+import 'todos/todos_screen.dart';
 
 class MainApp extends StatelessWidget {
   const MainApp({super.key});
@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
           focusedBorder: kOutlineInputBorder,
         ),
       ),
-      home: const HomeScreen(),
+      home: const TodosScreen(),
     );
   }
 }

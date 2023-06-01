@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'todo_content.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+class TodosScreen extends StatelessWidget {
+  const TodosScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
