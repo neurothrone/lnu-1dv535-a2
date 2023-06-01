@@ -115,7 +115,7 @@ class _AddTodoButtonState extends State<AddTodoButton> {
         splashColor: Colors.deepPurple.shade700,
         child: Container(
           height: kInputHeight,
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          padding: const EdgeInsets.symmetric(horizontal: kPadding10),
           alignment: Alignment.center,
           decoration: const BoxDecoration(
             borderRadius: kRightBorderRadius,

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../core/constants.dart';
+
 class TodoList extends StatelessWidget {
   const TodoList({
     super.key,
@@ -20,7 +22,7 @@ class TodoList extends StatelessWidget {
         final todo = todos[index];
         return ListTile(
           onTap: () => onTapTodo(index),
-          contentPadding: const EdgeInsets.all(0),
+          contentPadding: const EdgeInsets.all(kPadding0),
           title: Text(todo),
         );
       },
