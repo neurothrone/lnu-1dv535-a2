@@ -19,23 +19,3 @@ const kOutlineInputBorder = OutlineInputBorder(
   borderRadius: kLeftBorderRadius,
 );
 
-const List<String> kTodos = [
-  "Buy groceries",
-  "Walk the dog",
-  "Finish Flutter project",
-  "Study for exam",
-  "Clean the house",
-  "Pay bills",
-  "Go to the gym",
-  "Read a book",
-  "Prepare dinner",
-  "Buy groceries",
-  "Walk the dog",
-  "Finish Flutter project",
-  "Study for exam",
-  "Clean the house",
-  "Pay bills",
-  "Go to the gym",
-  "Read a book",
-  "Prepare dinner",
-];
