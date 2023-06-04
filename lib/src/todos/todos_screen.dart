@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'package:rounded_input_button/rounded_input_button.dart';
+
 import '../core/constants.dart';
-import 'add_todo_input.dart';
 import 'todo_list.dart';
 
 class TodosScreen extends StatefulWidget {
@@ -50,9 +51,13 @@ class _TodosScreenState extends State<TodosScreen> {
         padding: const EdgeInsets.all(kPadding20),
         child: Column(
           children: [
-            AddTodoInput(
+            RoundedInputButton(
               controller: _controller,
-              onAddTodo: _addTodo,
+              onPressed: _addTodo,
+              buttonText: "Add",
+              hintText: "ToDo",
+              buttonBackgroundColor: Colors.deepPurple,
+              focusedBorderColor: Colors.deepPurple,
             ),
             const SizedBox(height: kPadding10),
             TodoList(
