@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:rounded_input_button/rounded_input_button.dart';
-
 import '../core/constants.dart';
+import '../widgets/rounded_input_button.dart';
 import 'todo_list.dart';
 
 class TodosScreen extends StatefulWidget {
@@ -58,6 +57,7 @@ class _TodosScreenState extends State<TodosScreen> {
               hintText: "ToDo",
               buttonBackgroundColor: Colors.deepPurple,
               focusedBorderColor: Colors.deepPurple,
+              textAlign: TextAlign.start,
             ),
             const SizedBox(height: kPadding10),
             TodoList(
