@@ -10,11 +10,6 @@ dependencies:
   flutter:
     sdk: flutter
 
-  rounded_input_button:
-    git:
-      url: https://github.com/neurothrone/rounded_input_button.git
-      ref: main
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
