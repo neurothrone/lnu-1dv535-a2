@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../core/constants.dart';
+
 class RoundedInputButton extends StatelessWidget {
   const RoundedInputButton({
     super.key,
@@ -192,7 +194,7 @@ class _RightRoundedButtonState extends State<RightRoundedButton> {
         ),
         splashColor: Colors.deepPurple.shade700,
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 10.0),
+          padding: const EdgeInsets.symmetric(horizontal: kPadding20),
           alignment: Alignment.center,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.only(
